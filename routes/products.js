@@ -47,6 +47,7 @@ router.get('/', async (req, res) => {
     // Define a DELETE endpoint for deleting a product by ID
     router.delete('/del/:id', async (req, res) => {
       const productId = req.params.id;
+      console.log(productId);
       try {
         const response = await axios.delete(`${externalUrl}/${productId}`, {
           headers: { 'app-id': 'dummy-app-id' },
